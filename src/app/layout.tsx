@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth snap-y snap-mandatory">
       <body
         className={`${outfit.variable} ${inter.variable} antialiased bg-background text-foreground font-sans flex flex-col min-h-screen`}
       >
