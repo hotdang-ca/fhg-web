@@ -1,4 +1,5 @@
 import { Mail, Calendar } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 export default function Contact() {
     return (
@@ -12,24 +13,22 @@ export default function Contact() {
                         Let’s talk through your problem. Find out exactly what it costs, and how quickly I can get it done.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-                        <a
-                            href="#"
-                            className="inline-flex h-14 items-center justify-center rounded-full bg-background px-8 text-lg font-bold text-primary shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-                        >
-                            <Calendar className="mr-2 h-5 w-5" />
-                            Book a Free Call
-                        </a>
+                    <div className="pt-8">
+                        <ContactForm />
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 opacity-80">
+                        <p className="text-sm">Or email directly:</p>
                         <a
                             href="mailto:james@fourandahalfgiraffes.ca"
-                            className="inline-flex h-14 items-center justify-center rounded-full border-2 border-primary-foreground bg-transparent px-8 text-lg font-bold text-primary-foreground shadow-sm transition-colors hover:bg-primary-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+                            className="inline-flex items-center font-bold hover:underline"
                         >
-                            <Mail className="mr-2 h-5 w-5" />
+                            <Mail className="mr-2 h-4 w-4" />
                             james@fourandahalfgiraffes.ca
                         </a>
                     </div>
 
-                    <p className="text-sm text-primary-foreground/80 pt-8">
+                    <p className="text-sm text-primary-foreground/80 pt-4">
                         No big commitments — just a small step to make your tech stand taller.
                     </p>
                 </div>
