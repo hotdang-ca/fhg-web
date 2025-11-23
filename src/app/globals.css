@@ -1,16 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #FFF7ED; /* orange-50 */
-  --color-foreground: #431407; /* orange-950 */
-  
-  --color-primary: #EA580C; /* orange-600 */
+  --color-background: #FFF7ED;
+  /* orange-50 */
+  --color-foreground: #431407;
+  /* orange-950 */
+
+  --color-primary: #EA580C;
+  /* orange-600 */
   --color-primary-foreground: #FFFFFF;
-  
-  --color-secondary: #78350F; /* amber-900 */
+
+  --color-secondary: #78350F;
+  /* amber-900 */
   --color-secondary-foreground: #FFF7ED;
-  
-  --color-accent: #FDBA74; /* orange-300 */
+
+  --color-accent: #FDBA74;
+  /* orange-300 */
   --color-accent-foreground: #431407;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -24,6 +29,8 @@
 
 body {
   background-color: var(--color-background);
+  background-image: url('/bg_tile.jpg');
+  background-repeat: repeat;
   color: var(--color-foreground);
   font-family: var(--font-sans);
 }

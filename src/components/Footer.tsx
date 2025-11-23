@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -6,9 +7,24 @@ export default function Footer() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     <div className="space-y-4">
-                        <h3 className="text-lg font-bold font-heading text-primary">Four And A Half Giraffes</h3>
+                        <Link href="/" className="flex items-center gap-2">
+                            <div className="relative w-8 h-8">
+                                <Image
+                                    src="/logo-sm.png"
+                                    alt="FHG Logo"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <span className="font-heading font-bold text-lg text-foreground">
+                                Four And A Half Giraffes
+                            </span>
+                        </Link>
                         <p className="text-sm text-muted-foreground max-w-xs">
                             Standing tall to help small Canadian businesses with websites, apps, & automation.
+                        </p>
+                        <p className="text-sm text-muted-foreground max-w-xs">
+                            We respect and honour the Treaties that were made on all territories, we acknowledge the harms and mistakes of the past, and we are committed to move forward in partnership with Indigenous Nations in the spirit of reconciliation and collaboration.
                         </p>
                     </div>
                     <div className="space-y-4">
