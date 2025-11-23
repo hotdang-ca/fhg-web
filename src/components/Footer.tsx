@@ -23,6 +23,9 @@ export default function Footer() {
                         <p className="text-sm text-muted-foreground max-w-xs">
                             Standing tall to help small Canadian businesses with websites, apps, & automation.
                         </p>
+                        <p className="text-sm text-muted-foreground max-w-xs">
+                            We respect and honour the Treaties that were made on all territories, we acknowledge the harms and mistakes of the past, and we are committed to move forward in partnership with Indigenous Nations in the spirit of reconciliation and collaboration.
+                        </p>
                     </div>
                     <div className="space-y-4">
                         <h4 className="text-sm font-semibold">Services</h4>
