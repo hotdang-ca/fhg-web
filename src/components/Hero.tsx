@@ -1,38 +1,64 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden py-20 md:py-32 lg:py-40 bg-gradient-to-b from-orange-50 to-background snap-start">
+        <section className="relative overflow-hidden pt-20 pb-0 md:pt-32 lg:pt-40 bg-gradient-to-b from-orange-50 to-background snap-start">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
                     <div className="inline-block rounded-full bg-orange-100 px-4 py-1.5 text-sm font-semibold text-primary mb-4">
-                        Small jobs welcomed. Quick fixes celebrated.
+                        Web Development & Automation for Small Business
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight text-foreground">
-                        Standing tall to help small Canadian businesses with <span className="text-primary">websites, apps, & automation.</span>
+                        I Build <span className="text-primary">Small, Useful Things</span> for Your Business.
                     </h1>
-                    <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                        Running a tiny business doesn’t mean your technology should come up short.
-                        I help Canadian small businesses, solo entrepreneurs, and community organizations build simple, affordable digital tools — fast.
+                    <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+                        No bloated agencies. No confusing jargon. Just a guy who likes fixing problems with code.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
                         <Link
                             href="#contact"
-                            className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-lg font-medium text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:scale-105 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                            className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                         >
                             Book a Free Call
                         </Link>
                         <Link
-                            href="#packages"
-                            className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary bg-transparent px-8 text-lg font-medium text-primary shadow-sm transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                            href="#services"
+                            className="inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                         >
-                            View Packages
+                            See What I Do
                         </Link>
                     </div>
-                    <p className="text-sm text-muted-foreground pt-4">
-                        Because even small problems deserve tall solutions.
-                    </p>
                 </div>
+            </div>
+
+            {/* Giraffe Head Image */}
+            <div className="relative w-full flex justify-center mt-12 z-0">
+                <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
+                    <Image
+                        src="/giraffe-head.png"
+                        alt="Four And A Half Giraffes"
+                        fill
+                        className="object-contain object-bottom"
+                        priority
+                    />
+                </div>
+            </div>
+
+            {/* Wave Divider */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+                <svg
+                    className="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[100px]"
+                    data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        className="fill-background"
+                    ></path>
+                </svg>
             </div>
 
             {/* Decorative background elements */}
