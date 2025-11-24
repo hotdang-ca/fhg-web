@@ -4,7 +4,10 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export default defineConfig({
-    schema: "./src/db/schema.ts",
+    schema:
+        process.env.NODE_ENV === "production"
+            ? "./src/db/schema.postgres.ts"
+            : "./src/db/schema.sqlite.ts",
     out: "./drizzle",
     dialect: process.env.NODE_ENV === "production" ? "postgresql" : "sqlite",
     dbCredentials:

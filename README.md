@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+##    *   Run the following command locally to sync your schema to the new Supabase database:
+        ```bash
+        NODE_ENV=production DATABASE_URL="your-supabase-connection-string" npx drizzle-kit push
+        ```
+
 ## Getting Started
 
 First, run the development server:
