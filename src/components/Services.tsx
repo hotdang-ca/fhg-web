@@ -27,7 +27,7 @@ export default function Services() {
                             <li>• Speed optimizations</li>
                             <li>• Accessibility improvements</li>
                         </ul>
-                        <p className="text-primary font-bold">Typical cost: $150–$500</p>
+                        <p className="text-primary font-bold">From as little as $99</p>
                     </div>
 
                     {/* Service 2 */}
@@ -45,7 +45,7 @@ export default function Services() {
                             <li>• Reporting dashboards</li>
                             <li>• Lightweight staff tools</li>
                         </ul>
-                        <p className="text-primary font-bold">Typical cost: $500–$2,000</p>
+                        <p className="text-primary font-bold">From as little as $499</p>
                     </div>
 
                     {/* Service 3 */}
@@ -62,7 +62,7 @@ export default function Services() {
                             <li>• Sync apps, forms, spreadsheets, and email</li>
                             <li>• Build workflow triggers & reminders</li>
                         </ul>
-                        <p className="text-primary font-bold">Typical cost: $200–$800</p>
+                        <p className="text-primary font-bold">From as little as $199</p>
                     </div>
                 </div>
 
