@@ -6,12 +6,20 @@ interface Project {
     title: string;
     company: string;
     description: string;
-    cost: string;
+    cost?: string;
     image: string;
-    url: string;
+    url?: string;
 }
 
 const projects: Project[] = [
+    {
+        title: "Museum CRM",
+        company: "Manitoba Computer & Gaming Museum",
+        description: "A CRM for the Manitoba Computer & Gaming Museum.",
+        cost: "$1000",
+        image: "/museum-crm.png",
+        url: "https://museum-app-ten.vercel.app/"
+    },
     {
         title: "Custom Leaderboard App",
         company: "Regina Villains Strength And Conditioning",
@@ -35,7 +43,37 @@ const projects: Project[] = [
         cost: "$1800",
         image: "/used-market.png",
         url: "https://mpn.fourandahalfgiraffes.ca/dashboard"
-    }
+    },
+    {
+        title: "URL Previewer",
+        company: "Private",
+        description: "Grab meta tags from Canadian news outlets (or any other website) and re-host them for sharing on social media.",
+        cost: "$200",
+        image: "/url-previewer.png",
+    },
+    {
+        title: "Wordle Multiplayer",
+        company: "Private",
+        description: "Turn-based Wordle with your friends and family.",
+        cost: "$399",
+        image: "/wordle-multiplayer.png",
+        url: "https://wm.fourandahalfgiraffes.ca/"
+    },
+    {
+        title: "Get A Job: Job Cover Letter Generator",
+        company: "Private",
+        description: "Generate cover letters for job applications, and track application process.",
+        cost: "$299",
+        image: "/job-cover-letter.png",
+        url: "https://getajob.fourandahalfgiraffes.ca/"
+    },
+    {
+        title: "Apple Wallet Card Generator",
+        company: "Private",
+        description: "Generate Apple Wallet cards for clients to use for loyalty rewards.",
+        image: "/apple-wallet-card-generator.png",
+        url: "https://v0-apple-wallet-pass-generator.vercel.app/"
+    },
 ];
 
 export default function ProjectCarousel() {
@@ -61,21 +99,21 @@ export default function ProjectCarousel() {
                                     <h3 className="font-heading font-bold text-lg text-foreground">{project.title}</h3>
                                     <p className="text-sm text-primary font-medium">{project.company}</p>
                                 </div>
-                                <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                                {project.cost && <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
                                     {project.cost}
-                                </span>
+                                </span>}
                             </div>
                             <p className="text-muted-foreground text-sm mb-4 flex-grow">
                                 {project.description}
                             </p>
-                            <Link
+                            {project.url ? <Link
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center text-sm font-medium text-primary hover:underline mt-auto"
                             >
                                 View Project <ExternalLink className="ml-1 h-3 w-3" />
-                            </Link>
+                            </Link> : null}
                         </div>
                     </div>
                 ))}
