@@ -1,6 +1,7 @@
 'use client';
 
 import { Lock } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface PlanPreviewProps {
     planContent: string;
@@ -21,9 +22,11 @@ export default function PlanPreview({ planContent, onUnlock }: PlanPreviewProps)
 
             <div className="relative rounded-2xl bg-background border border-border shadow-2xl overflow-hidden">
                 {/* Blurred Content Preview */}
-                <div className="p-8 prose opacity-50 blur-sm select-none h-[400px] overflow-hidden">
-                    <div className="whitespace-pre-wrap font-mono text-sm">
-                        {planContent}
+                <div className="p-8 opacity-50 blur-sm select-none h-[400px] overflow-hidden">
+                    <div className="prose prose-sm max-w-none dark:prose-invert">
+                        <ReactMarkdown>
+                            {planContent}
+                        </ReactMarkdown>
                     </div>
                 </div>
 

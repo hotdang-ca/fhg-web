@@ -81,12 +81,14 @@ export default function AILeadCapture() {
             {step === 'form' && (
                 <LeadForm
                     planContent={plan}
+                    userPrompt={prompt}
                     onBack={() => setStep('review')}
                 />
             )}
 
             {step === 'contact_only' && (
                 <LeadForm
+                    userPrompt={prompt}
                     onBack={() => setStep('idle')}
                 />
             )}

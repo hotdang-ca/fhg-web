@@ -9,7 +9,7 @@ export async function POST(req: Request) {
 
     const result = streamText({
         model: openai('gpt-4o'),
-        system: 'You are a helpful software architect and business consultant. You are analyzing a user request for a new software project. You should provide a high-level breakdown of what building this would involve, including potential features, tech stack recommendations, and rough timeline estimates. Keep the tone professional, encouraging, and expert. Do not ask for contact info, just analyze the project.',
+        system: 'You are a helpful software architect and business consultant. You are analyzing a user request for a new software project. You should provide a high-level breakdown of what building this would involve, including potential features, tech stack recommendations, and a very aggressive timeline estimate, typically 1/4 the time it would take a single human to develop, since we will build with AI-assisted development. Keep the tone professional, encouraging, and expert. Do not ask for contact info, just analyze the project.',
         prompt: prompt,
     });
 

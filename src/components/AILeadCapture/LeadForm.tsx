@@ -3,13 +3,15 @@
 import { useState } from 'react';
 import { submitContactForm } from '@/app/actions';
 import { Loader2, CheckCircle, ArrowLeft, Copy, Check } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface LeadFormProps {
     planContent?: string;
     onBack?: () => void;
+    userPrompt?: string;
 }
 
-export default function LeadForm({ planContent, onBack }: LeadFormProps) {
+export default function LeadForm({ planContent, onBack, userPrompt }: LeadFormProps) {
     const [pending, setPending] = useState(false);
     const [success, setSuccess] = useState(false);
     const [serverMessage, setServerMessage] = useState('');
@@ -27,10 +29,18 @@ export default function LeadForm({ planContent, onBack }: LeadFormProps) {
         setPending(true);
         setServerMessage('');
 
+        let fullMessage = formData.get('message') as string;
+
+        if (userPrompt) {
+            fullMessage = `[USER PROMPT]\n${userPrompt}\n\n${fullMessage}`;
+        }
+
         // If we have a generated plan, append it to the message or a separate field
         if (planContent) {
-            formData.set('message', `[AI PLAN GENERATED]\n\n${planContent}\n\n[USER MESSAGE]\n${formData.get('message')}`);
+            fullMessage = `${fullMessage}\n\n[AI PLAN GENERATED]\n${planContent}`;
         }
+
+        formData.set('message', fullMessage);
 
         const result = await submitContactForm(formData);
 
@@ -74,7 +84,11 @@ export default function LeadForm({ planContent, onBack }: LeadFormProps) {
                             </button>
                         </div>
                         <div className="p-4 bg-white rounded-lg border border-border shadow-sm max-h-80 overflow-y-auto">
-                            <p className="text-base font-mono whitespace-pre-wrap text-black">{planContent}</p>
+                            <div className="prose prose-sm max-w-none text-black">
+                                <ReactMarkdown>
+                                    {planContent}
+                                </ReactMarkdown>
+                            </div>
                         </div>
                     </div>
                 )}
