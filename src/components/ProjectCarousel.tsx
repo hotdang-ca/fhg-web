@@ -74,6 +74,20 @@ const projects: Project[] = [
         image: "/apple-wallet-card-generator.png",
         url: "https://v0-apple-wallet-pass-generator.vercel.app/"
     },
+    {
+        title: "James-It",
+        company: "Personal",
+        description: "My personal Concierge Platform, open-source for others to also clone and deploy.",
+        image: "/james-it.png",
+        url: "https://james-it.vercel.app"
+    },
+    {
+        title: "HowDoYouSay",
+        company: "Four And A Half Giraffes",
+        description: "A Language Learning App to help teach every canadian to learn the language spoken by every canadian, in use on Kiosks.",
+        image: "/howdoyousay.png",
+        url: "https://howdoyousay.fourandahalfgiraffes.ca"
+    },
 ];
 
 export default function ProjectCarousel() {
