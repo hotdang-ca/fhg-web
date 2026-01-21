@@ -1,5 +1,5 @@
 import { Mail, Calendar } from 'lucide-react';
-import ContactForm from './ContactForm';
+import AILeadCapture from './AILeadCapture';
 
 export default function Contact() {
     return (
@@ -14,7 +14,7 @@ export default function Contact() {
                     </p>
 
                     <div className="pt-8">
-                        <ContactForm />
+                        <AILeadCapture />
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 opacity-80">
