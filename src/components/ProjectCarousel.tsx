@@ -86,7 +86,7 @@ const projects: Project[] = [
         company: "Four And A Half Giraffes",
         description: "A Language Learning App to help teach every canadian to learn the language spoken by every canadian, in use on Kiosks.",
         image: "/howdoyousay.png",
-        url: "https://howdoyousay.fourandahalfgiraffes.ca"
+        url: "https://app.howdoyousay.info"
     },
 ];
 
