@@ -39,6 +39,15 @@ export default function ContactForm() {
 
     return (
         <form action={handleSubmit} className="bg-background rounded-2xl p-8 shadow-lg max-w-lg mx-auto text-left space-y-4">
+            <div className="text-center mb-6">
+                <h3 className="text-xl font-bold font-heading text-foreground">
+                    Let&lsquo;s Chat
+                </h3>
+                <p className="text-sm text-zinc-600">
+                    Fill out the form below to get started.
+                </p>
+            </div>
+
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1">Name</label>
                 <input
